@@ -17,7 +17,7 @@ export const metadata = {
   description: "চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম এক নজরে।",
   icons: { icon: "/logo-icon.png" },
 };
-
+export const dynamic = "force-dynamic";
 export default async function RootLayout({ children }) {
   const [categories, products] = await Promise.all([getCategories(), getProducts()]);
   return (
